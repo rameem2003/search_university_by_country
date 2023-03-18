@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-image: url(./istockphoto-943758330-612x612.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: yellow;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .right a{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+#searchBox{
+    width: 60%;
+    height: 50px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 25px 71px -4px rgba(0,0,0,0.93);
+-webkit-box-shadow: 5px 25px 71px -4px rgba(0,0,0,0.93);
+-moz-box-shadow: 5px 25px 71px -4px rgba(0,0,0,0.93);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#searchBox.hideSearchBox{
+    display: none;
+}
+
+#searchBox #searchCountry{
+    height: 100%;
+    width: 90%;
+    border-radius: 20px 0 0 20px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+}
+
+#searchBox #searchBtn{
+    height: 100%;
+    width: 10%;
+    border-radius: 0 20px 20px 0;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: beige;
+    border: none;
+    outline: none;
+}
+
+#searchResult{
+    width: 90%;
+    display: none;
+    margin-top: 100px;
+}
+
+#searchResult.showResult{
+    display: initial;
+}
+
+#searchResult .card{
+    background-color: white;
+    padding: 10px 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: -1px 37px 71px -41px rgba(0,0,0,0.87);
+-webkit-box-shadow: -1px 37px 71px -41px rgba(0,0,0,0.87);
+-moz-box-shadow: -1px 37px 71px -41px rgba(0,0,0,0.87);
+}
+
+.card .des{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.card span{
+    background-color: red;
+    padding: 8px;
+    color: white;
+    border-radius: 15px;
+}
+
+.card a{
+    text-decoration: none;
+    color: blue;
+}
+
+.error{
+    background-color: white;
+    padding: 10px 20px;
+}
