@@ -8,9 +8,13 @@ const searchResult = document.getElementById("searchResult");
 
 searchBtn.addEventListener("click", () => {
     let countryName = searchCountry.value;
-    
 
-    fetch(`http://universities.hipolabs.com/search?country=${countryName}`).then(response => response.json()).then(data => {
+    fetchUnivarsitydata(countryName);
+})
+
+
+const fetchUnivarsitydata = (inputCountry) => {
+    fetch(`http://universities.hipolabs.com/search?country=${inputCountry}`).then(response => response.json()).then(data => {
         if(data.length != 0){
             searchBox.classList.add("hideSearchBox");
             searchResult.classList.add("showResult");
@@ -34,4 +38,13 @@ searchBtn.addEventListener("click", () => {
         }
         
     })
+}
+
+searchCountry.addEventListener("keyup", (e) => {
+    // console.log(e);
+    if(e.key === "Enter"){
+        let countryName = searchCountry.value;
+
+        fetchUnivarsitydata(countryName);
+    }
 })
