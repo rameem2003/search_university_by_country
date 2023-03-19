@@ -116,3 +116,18 @@ header .right a{
     background-color: white;
     padding: 10px 20px;
 }
+
+@media screen and (max-width:900px) {
+    header{
+        display: block;
+        text-align: center;
+    }
+
+    header .right{
+        margin-top: 20px;
+    }
+
+    #searchBox{
+        width: 85%;
+    }
+}
