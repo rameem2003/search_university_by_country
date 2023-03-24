@@ -34,7 +34,7 @@ const fetchUnivarsitydata = (inputCountry) => {
             searchBox.classList.add("hideSearchBox");
             searchResult.classList.add("showResult");
             console.log(data.length);
-            searchResult.innerHTML = `<h1 class="error" style="text-align: center;">'${countryName}' Not Found</h1>`
+            searchResult.innerHTML = `<h1 class="error" style="text-align: center;">'${inputCountry}' Not Found</h1>`
         }
         
     })
